@@ -16,5 +16,8 @@ class Settings(BaseSettings):
 
     mongo_url: str
 
+    switch_on_delay: int
+    switch_off_delay: int
+
 
 settings = Settings()
