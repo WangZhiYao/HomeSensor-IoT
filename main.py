@@ -25,10 +25,10 @@ scheduler = AsyncIOScheduler()
 
 def on_connect(client, userdata, flags, reason_code, properties):
     if reason_code == mqtt.MQTT_ERR_SUCCESS:
-        logging.info(f"Connected to MQTT broker {settings.mqtt_host}:{settings.mqtt_port}")
+        logging.info(f"Connected to MQTT broker: {settings.mqtt_host}:{settings.mqtt_port}")
         mqtt_client.subscribe(settings.mqtt_subscriber_topic)
     else:
-        logging.info(f"Failed to connect to {settings.mqtt_host}:{settings.mqtt_port} {reason_code}")
+        logging.info(f"Failed to connect to: {settings.mqtt_host}:{settings.mqtt_port} - {reason_code}")
 
 
 def on_message(client, userdata, msg):

@@ -35,7 +35,7 @@ class EventHandlerFactory:
             :param event:
             :param scheduler:
         """
-        logging.info(f"Handling event {event}")
+        logging.info(f"Handling event: {event}")
         handler_class = EventHandlerFactory.event_handlers.get(event.type)
         if handler_class:
             handler = handler_class(scheduler)
